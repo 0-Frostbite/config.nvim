@@ -4,19 +4,19 @@ vim.o.background = "dark"
 -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 function Color(theme, trans)
-	if theme == "onedark" then
-		require("onedark").setup({
-			style = "darker", -- dark, darker, cool, deep, warm, warmer
-			transparent = trans,
-			term_colors = true,
-			ending_tildes = false,
-		})
-        require("lualine").setup({
-            options = { theme = "ayu_mirage" },
-        })
-		vim.cmd.colorscheme(theme)
+	-- if theme == "onedark" then
+	-- 	require("onedark").setup({
+	-- 		style = "darker", -- dark, darker, cool, deep, warm, warmer
+	-- 		transparent = trans,
+	-- 		term_colors = true,
+	-- 		ending_tildes = false,
+	-- 	})
+ --        require("lualine").setup({
+ --            options = { theme = "ayu_mirage" },
+ --        })
+	-- 	vim.cmd.colorscheme(theme)
 
-	elseif theme == "cyberdream" then
+	if theme == "cyberdream" then
 		require("cyberdream").setup({
 			transparent = trans,
 			italic_comments = true,
@@ -53,11 +53,11 @@ function Color(theme, trans)
 end
 
 c = "cyberdream" --$
-o = "onedark" --$
-r = "retrobox"
+-- o = "onedark" --$
+r = "rakis"
 v = "vscode" --$
 m = "miasma" --$
 g = "gruvbox-material" --$
 r = "retrobox"
 
-Color(g)
+Color(v)
