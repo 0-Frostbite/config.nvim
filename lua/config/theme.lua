@@ -3,7 +3,7 @@ vim.o.background = "dark"
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
-function Color(theme, trans)
+function color(theme, trans)
 	-- if theme == "onedark" then
 	-- 	require("onedark").setup({
 	-- 		style = "darker", -- dark, darker, cool, deep, warm, warmer
@@ -58,6 +58,5 @@ r = "rakis"
 v = "vscode" --$
 m = "miasma" --$
 g = "gruvbox-material" --$
-r = "retrobox"
 
-Color(v)
+color(g)
