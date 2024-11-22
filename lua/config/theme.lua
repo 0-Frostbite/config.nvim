@@ -4,24 +4,8 @@ vim.o.background = "dark"
 -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 function color(theme, trans)
-	if theme == "cyberdream" then
-		require("cyberdream").setup({
-			transparent = trans,
-			italic_comments = true,
-			hide_fillchars = false,
-			borderless_telescope = false,
-			extensions = {
-				telescope = true,
-				notify = true,
-			},
-		})
-		require("lualine").setup({
-			options = { theme = "auto" },
-		})
-		vim.cmd.colorscheme(theme)
-
-	elseif theme == "vscode" then
-		require("vscode").setup({
+	if theme == v then
+		require(v).setup({
 			transparent = trans,
 			italic_comments = true,
             disable_nvimtree_bg = true,
@@ -42,5 +26,7 @@ end
 
 v = "vscode" --$
 g = "gruvbox-material" --$
+r = "retrobox"
+o = "oxocarbon"
 
 color(g)
