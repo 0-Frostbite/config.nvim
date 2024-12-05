@@ -3,7 +3,7 @@ local harpoon = require("harpoon")
 harpoon:setup({})
 
 vim.keymap.set("n","<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n","<A-z>", function() harpoon:list():remove() end)
+vim.keymap.set("n","<leader>z", function() harpoon:list():remove() end)
 -- vim.keymap.set("n","<A-a>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 vim.keymap.set("n","<A-1>", function() harpoon:list():select(1) end)
@@ -16,8 +16,8 @@ vim.keymap.set("n","<A-7>", function() harpoon:list():select(7) end)
 vim.keymap.set("n","<A-8>", function() harpoon:list():select(8) end)
 vim.keymap.set("n","<A-9>", function() harpoon:list():select(9) end)
 
-vim.keymap.set("n","<A-,>", function() harpoon:list():prev() end)
-vim.keymap.set("n","<A-.>", function() harpoon:list():next() end)
+vim.keymap.set("n","<A-q>", function() harpoon:list():prev() end)
+vim.keymap.set("n","<A-e>", function() harpoon:list():next() end)
 
 local conf = require("telescope.config").values
 local function toggle_telescope(harpoon_files)

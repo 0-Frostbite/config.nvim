@@ -13,6 +13,7 @@ require("config.telescope")
 require("config.hipatterns")
 require("config.inc-rename")
 require("config.refactoring")
+require("config.markdown")
 
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
@@ -35,3 +36,6 @@ vim.keymap.set("n", "<C-l>", ":vertical resize +2 <CR>")
 
 vim.keymap.set("n", "ss", ":split <CR>")
 vim.keymap.set("n", "vs", ":vsplit <CR>")
+
+vim.keymap.set("n", "<C-q>", "<C-a>")
+vim.keymap.set("n", "<C-e>", "<C-x>")
