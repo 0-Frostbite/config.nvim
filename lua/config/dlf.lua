@@ -39,6 +39,8 @@ lint.linters_by_ft = {
 	python = { "ruff" },
 	c = { "cpplint" },
 	cpp = { "cpplint" },
+	css = { "stylelint" },
+	html = { "htmllint" },
 }
 
 -- vim.keymap.set("n","<leader>l",print("linting"), {})
@@ -59,6 +61,8 @@ require("formatter").setup({
 		lua = { require("formatter.filetypes.lua").stylua },
 		python = { require("formatter.filetypes.python").ruff },
 		cpp = { require("formatter.filetypes.cpp").clang_format },
+		css = { require("formatter.filetypes.cpp").prettierd },
+		html = { require("formatter.filetypes.cpp").prettierd },
 		c = { require("formatter.filetypes.c").clang_format },
 		["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 	},

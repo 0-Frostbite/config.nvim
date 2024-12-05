@@ -1,6 +1,8 @@
 ### KeyMappings
 
 ##### NeoVim Default
+- **"<C-a>"** : Increase a number by one
+- **"<C-x>"** : Decrease a number by one
 
 ##### BarBar
 
@@ -25,6 +27,10 @@
 - **"<A-[count]>"** : Load Buffer at Position[count]
 - **"<A-z>"** : Remove Buffer form Harpoon list
 
+##### Inc-Rename
+
+##### Refactoring
+
 ##### Resize
 
 - **"<C-j>"** : resize +2
@@ -35,7 +41,8 @@
 ##### Telescope
 
 - **"<leader>ff"** : Find file
-- **"<leader>fg"** : File grep
+- **"<leader>fs"** : Find in file
+- **"<leader>fg"** : Folder grep
 - **"<leader>fb"** : Find buffer 
 - **"<C-x>"** : Open file in horizontal split
 - **"<C-v>"** : Open file in vertical split

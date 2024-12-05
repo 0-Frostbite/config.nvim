@@ -45,3 +45,4 @@ require("lspconfig").basedpyright.setup({
 require("lspconfig").clangd.setup({
 	capabilities = capabilities,
 })
+

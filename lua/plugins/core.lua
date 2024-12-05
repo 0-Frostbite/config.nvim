@@ -3,8 +3,15 @@ return {
 	{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
-		dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+			},
+			"nvim-telescope/telescope-file-browser.nvim",
+		},
 	},
 	{ "nvim-tree/nvim-tree.lua" },
 	{ "nvim-tree/nvim-web-devicons" },
@@ -14,11 +21,27 @@ return {
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
 	},
+	{
+		"ThePrimeagen/refactoring.nvim",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	},
 	-- { "romgrk/barbar.nvim" },
 	{ "nvim-lualine/lualine.nvim" },
 	{ "williamboman/mason.nvim" },
 	{ "stevearc/dressing.nvim" },
 	{ "akinsho/toggleterm.nvim", version = "*", keys = { "<leader>t" } },
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {},
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+	},
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
@@ -58,7 +81,7 @@ return {
 			},
 			{
 				"<C-s>",
-				mode = { "c" },
+				mode = { "n" },
 				function()
 					require("flash").toggle()
 				end,
@@ -66,7 +89,18 @@ return {
 			},
 		},
 	},
-	{ "rcarriga/nvim-notify" },
+	{
+		"rcarriga/nvim-notify",
+		opts = {
+			timeout = 3000,
+			-- background_colour = "#000000",
+			render = "wrapped-compact",
+			stages = "fade",
+			fps = 120,
+		},
+	},
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 	{ "numToStr/Comment.nvim" },
+	{ "echasnovski/mini.hipatterns", event = "BufReadPre", opts = {} },
+	{ "smjonas/inc-rename.nvim" },
 }
