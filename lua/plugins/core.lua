@@ -39,7 +39,7 @@ return {
 		opts = {},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
+			-- "rcarriga/nvim-notify",
 		},
 	},
 	{
@@ -90,24 +90,86 @@ return {
 		},
 	},
 	{
-		"rcarriga/nvim-notify",
+		"j-hui/fidget.nvim",
 		opts = {
-			timeout = 3000,
-			-- background_colour = "#000000",
-			render = "wrapped-compact",
-			stages = "fade",
-			fps = 120,
+			notification = {
+				window = {
+					winblend = 0,
+					align = "top",
+				},
+			},
 		},
 	},
+	-- {
+	-- 	"rcarriga/nvim-notify",
+	-- 	opts = {
+	-- 		timeout = 3000,
+	-- 		background_colour = "#000000",
+	-- 		render = "wrapped-compact",
+	-- 		stages = "fade",
+	-- 		fps = 120,
+	-- 	},
+	-- },
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 	{ "numToStr/Comment.nvim" },
 	{ "echasnovski/mini.hipatterns", event = "BufReadPre", opts = {} },
 	{ "smjonas/inc-rename.nvim" },
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
 		---@module 'render-markdown'
 		---@type render.md.UserConfig
 		opts = {},
 	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("ibl").setup()
+		end,
+	},
+	{ "zaldih/themery.nvim" },
+	{
+		"L3MON4D3/LuaSnip",
+		run = "make install_jsregexp",
+		dependencies = { "rafamadriz/friendly-snippets" },
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+	{
+		"kawre/leetcode.nvim",
+		build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			-- "ibhagwan/fzf-lua",
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {
+			-- configuration goes here
+		},
+	},
+	{
+		"barrett-ruth/live-server.nvim",
+		build = "pnpm add -g live-server",
+		cmd = { "LiveServerStart", "LiveServerStop" },
+		config = function()
+			require("live-server").setup()
+		end,
+	},
+	{
+		"folke/zen-mode.nvim",
+		opts = {
+			window = {
+				backdrop = 1,
+				width = 160,
+				height = 1,
+			},
+		},
+	},
+	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
+	{ "xiyaowong/transparent.nvim" },
 }

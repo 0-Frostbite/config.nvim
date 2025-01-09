@@ -41,6 +41,8 @@ lint.linters_by_ft = {
 	cpp = { "cpplint" },
 	css = { "stylelint" },
 	html = { "htmlhint" },
+    javascript = { "oxlint" },
+    typescript = { "oxlint" },
 }
 
 -- vim.keymap.set("n","<leader>l",print("linting"), {})
@@ -60,10 +62,12 @@ require("formatter").setup({
 	filetype = {
 		lua = { require("formatter.filetypes.lua").stylua },
 		python = { require("formatter.filetypes.python").ruff },
+		c = { require("formatter.filetypes.c").clang_format },
 		cpp = { require("formatter.filetypes.cpp").clang_format },
 		css = { require("formatter.filetypes.css").prettierd },
 		html = { require("formatter.filetypes.html").prettierd },
-		c = { require("formatter.filetypes.c").clang_format },
+		javascript = { require("formatter.filetypes.javascript").prettierd},
+		typescript = { require("formatter.filetypes.typescript").prettierd},
 		["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 	},
 })

@@ -54,3 +54,6 @@ require("lspconfig").css_variables.setup({
 require("lspconfig").html.setup({
 	capabilities = capabilities,
 })
+require("lspconfig").ts_ls.setup({
+	capabilities = capabilities,
+})

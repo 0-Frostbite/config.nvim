@@ -14,6 +14,8 @@ require("config.hipatterns")
 require("config.inc-rename")
 require("config.refactoring")
 require("config.markdown")
+require("config.themery")
+require("config.ufo")
 
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
