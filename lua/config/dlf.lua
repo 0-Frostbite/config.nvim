@@ -41,11 +41,10 @@ lint.linters_by_ft = {
 	cpp = { "cpplint" },
 	css = { "stylelint" },
 	html = { "htmlhint" },
-    javascript = { "oxlint" },
-    typescript = { "oxlint" },
+	javascript = { "oxlint" },
+	typescript = { "oxlint" },
 }
 
--- vim.keymap.set("n","<leader>l",print("linting"), {})
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	callback = function()
 		require("lint").try_lint()
@@ -58,7 +57,7 @@ local util = require("formatter.util")
 
 require("formatter").setup({
 	logging = true,
-	log_level = vim.log.levels.WARN,
+	log_level = vim.log.levels.ERROR,
 	filetype = {
 		lua = { require("formatter.filetypes.lua").stylua },
 		python = { require("formatter.filetypes.python").ruff },
@@ -66,8 +65,8 @@ require("formatter").setup({
 		cpp = { require("formatter.filetypes.cpp").clang_format },
 		css = { require("formatter.filetypes.css").prettierd },
 		html = { require("formatter.filetypes.html").prettierd },
-		javascript = { require("formatter.filetypes.javascript").prettierd},
-		typescript = { require("formatter.filetypes.typescript").prettierd},
+		javascript = { require("formatter.filetypes.javascript").prettierd },
+		typescript = { require("formatter.filetypes.typescript").prettierd },
 		["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
 	},
 })

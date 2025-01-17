@@ -10,3 +10,5 @@ require("themery").setup({
     },
     livepreview = true,
 })
+
+require("lualine").setup()

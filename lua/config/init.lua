@@ -2,6 +2,7 @@ require("config.lazy")
 require("config.theme")
 require("config.treesitter")
 require("config.tree")
+require("config.ufo")
 require("config.lsp")
 require("config.dlf")
 require("config.toggleterm")
@@ -15,7 +16,6 @@ require("config.inc-rename")
 require("config.refactoring")
 require("config.markdown")
 require("config.themery")
-require("config.ufo")
 
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
@@ -38,6 +38,3 @@ vim.keymap.set("n", "<C-l>", ":vertical resize +2 <CR>")
 
 vim.keymap.set("n", "ss", ":split <CR>")
 vim.keymap.set("n", "vs", ":vsplit <CR>")
-
-vim.keymap.set("n", "<C-q>", "<C-a>")
-vim.keymap.set("n", "<C-e>", "<C-x>")
