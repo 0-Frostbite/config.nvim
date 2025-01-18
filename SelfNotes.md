@@ -1,3 +1,10 @@
+### Commands
+
+- Leet
+- Themery
+- TransparentToggle
+- lua theme(name, transparency)
+
 ### KeyMappings
 
 ##### NeoVim Default
@@ -16,20 +23,38 @@
 
 - **"<gcc>"** : Comment current line
 - **"<gcb>"** : Comment current block
-- **"<gc[count][motion]>"**
+- **"<gc(count)(motion)>"**
+
+##### Flash
+
+- **"s"** : Flash
+- **"S"** : Flash Treesitter
+- **"r"** : Remote Flash
+- **"R"** : Treesitter search
+- **"<C-s>"** : Toggle Flash search
 
 ##### Harpoon
 
 - **"<leader>a"** : Add Buffer to Harpoon list
-- **"<A-,>"** : Load previous buffer
-- **"<A-.>"** : Load next buffer
+- **"<A-q>"** : Load previous buffer
+- **"<A-e>"** : Load next buffer
 - **"<A-a>"** : Toggle HarpoonUI
 - **"<A-[count]>"** : Load Buffer at Position[count]
 - **"<A-z>"** : Remove Buffer form Harpoon list
 
 ##### Inc-Rename
 
+- **"<leader>rn"** : Increamental rename
+
 ##### Refactoring
+
+- **"<leader>re"** : Extract
+- **"<leader>rf"** : Extract to file
+- **"<leader>rv"** : Extract variable
+- **"<leader>ri"** : Inline variable
+- **"<leader>rI"** : Inline funciton
+- **"<leader>rb"** : Extract block
+- **"<leader>rbf"** : Extract block to file
 
 ##### Resize
 
@@ -70,9 +95,15 @@
 - **"y"** : Copy file name
 - **"Y"** : Copy relative path
 
+##### UFO
+
+- **"zR"** : open all folds
+- **"zM"** : open all folds
+
 ##### Miscellaneous 
 
-- **"s"** : Seek and Jump in Buffer     **Flash**
 - **"<leader>t"** : Open terminal       **ToggleTerm**
 - **"<C-b>"** : Toggle debugger         **DAP**
 - **"<leader>fw"** : Format and write   **Formatter**
+- **"<C-s>>v"** : Vertical split
+- **"<C-s>s"** : Horizontal split
