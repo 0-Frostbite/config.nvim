@@ -9,12 +9,7 @@ function theme(theme, trans)
 		borderless_telescope = true,
 		terminal_colors = true,
 	})
-	require("lualine").setup({
-		options = { theme = "auto" },
-	})
 	vim.cmd.colorscheme(theme)
-	-- else
-	-- end
 end
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

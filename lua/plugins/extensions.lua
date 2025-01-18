@@ -1,6 +1,9 @@
 return {
+	-- Neovim plugin manager
 	{ "folke/lazy.nvim", version = false },
+	-- Syntax highlighting
 	{ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
+	-- Fuzzy finder
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
@@ -13,14 +16,18 @@ return {
 			"nvim-telescope/telescope-file-browser.nvim",
 		},
 	},
+	-- File explorer
 	{ "nvim-tree/nvim-tree.lua" },
+	-- Nerd font icons for use by Neovim plugins
 	{ "nvim-tree/nvim-web-devicons" },
+	-- File traversal
 	{
 		"ThePrimeagen/harpoon",
 		keys = { "<leader>a", "<A-a>" },
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
 	},
+	-- Code refactoring
 	{
 		"ThePrimeagen/refactoring.nvim",
 		requires = {
@@ -28,11 +35,15 @@ return {
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
 	},
+	-- Tabline plugin
 	-- { "romgrk/barbar.nvim" },
+	-- Neovim statusline
 	{ "nvim-lualine/lualine.nvim" },
-	{ "williamboman/mason.nvim" },
+	-- Improve default vim.ui interface
 	{ "stevearc/dressing.nvim" },
+	-- Toggle and manage terminals
 	{ "akinsho/toggleterm.nvim", version = "*", keys = { "<leader>t" } },
+	-- UI replacement for messages, cmdline and popupmenu
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -42,6 +53,7 @@ return {
 			-- "rcarriga/nvim-notify",
 		},
 	},
+    -- Enhanced code navigation 
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
@@ -89,6 +101,7 @@ return {
 			},
 		},
 	},
+	-- UI for Neovim notifications
 	{
 		"j-hui/fidget.nvim",
 		opts = {
@@ -100,20 +113,15 @@ return {
 			},
 		},
 	},
-	-- {
-	-- 	"rcarriga/nvim-notify",
-	-- 	opts = {
-	-- 		timeout = 3000,
-	-- 		background_colour = "#000000",
-	-- 		render = "wrapped-compact",
-	-- 		stages = "fade",
-	-- 		fps = 120,
-	-- 	},
-	-- },
+	-- Autopair plugin
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
+	-- Commenting plugin
 	{ "numToStr/Comment.nvim" },
+	-- highlight patterns in text
 	{ "echasnovski/mini.hipatterns", event = "BufReadPre", opts = {} },
+	-- Incremental LSP renaming
 	{ "smjonas/inc-rename.nvim" },
+	-- Improve viewing Markdown files
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
@@ -121,24 +129,29 @@ return {
 		---@type render.md.UserConfig
 		opts = {},
 	},
+	-- add Indentation guides
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
 			require("ibl").setup()
 		end,
 	},
+	-- Colorscheme picker
 	{ "zaldih/themery.nvim" },
+	-- Snippent Engine
 	{
 		"L3MON4D3/LuaSnip",
 		run = "make install_jsregexp",
 		dependencies = { "rafamadriz/friendly-snippets" },
 	},
+	-- auto close and rename html tags
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()
 			require("nvim-ts-autotag").setup()
 		end,
 	},
+	-- Run Leetcode in Neovim
 	{
 		"kawre/leetcode.nvim",
 		build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
@@ -148,10 +161,9 @@ return {
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 		},
-		opts = {
-			-- configuration goes here
-		},
+		opts = {},
 	},
+	-- Start a live server
 	{
 		"barrett-ruth/live-server.nvim",
 		build = "pnpm add -g live-server",
@@ -160,6 +172,7 @@ return {
 			require("live-server").setup()
 		end,
 	},
+	-- Zen mode
 	{
 		"folke/zen-mode.nvim",
 		opts = {
@@ -170,6 +183,8 @@ return {
 			},
 		},
 	},
+	-- Code folding
 	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
+	-- Change background transparency
 	{ "xiyaowong/transparent.nvim" },
 }
