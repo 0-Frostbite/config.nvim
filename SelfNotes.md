@@ -1,15 +1,28 @@
 ### Commands
 
-- Leet
-- Themery
-- TransparentToggle
-- lua theme(name, transparency)
+- **Leet**  : Open Leetcode
+- **Themery** : Open Theme selector
+- **TransparentToggle** : Toggle background transparency
+- **lua theme(name, transparency)** : Change theme and transparency
+- **IBLToggle** - Toggle indentation lines
+- **LiveServerStart** : Start live server
+- **LiveServerStop** : Stop live server
 
 ### KeyMappings
 
-##### NeoVim Default
+##### NeoVim Builtin
+
 - **"<C-a>"** : Increase a number by one
 - **"<C-x>"** : Decrease a number by one
+- **"<C-s>v"** : Vertical split
+- **"<C-s>s"** : Horizontal split
+- **"di [bracket]** : Delete content inside the given bracket type
+- **"da [bracket]** : Delete bracket along with the content
+- **"{" "}"**   : Jump blank line
+- **"]" "["**   : Jump code block
+- **"(" ")"**   : Jump code block
+- **q [register]<action>q** : Record macor into register (a-z/A-Z)
+- **[count] @ [register]** : Execute macro at given register count times
 
 ##### BarBar
 
@@ -23,7 +36,7 @@
 
 - **"<gcc>"** : Comment current line
 - **"<gcb>"** : Comment current block
-- **"<gc(count)(motion)>"**
+- **"<gc [count motion]>"**
 
 ##### Flash
 
@@ -46,6 +59,15 @@
 
 - **"<leader>rn"** : Increamental rename
 
+##### LSP
+
+- **<gd>** : Goto definition
+- **<K>**  : Show documentation
+- **<gd>** : Show reference
+- **<C-j/k>** : Select item
+- **<M-j/k>** : Scroll documentation
+- **<Tab>** : Confirm
+
 ##### Refactoring
 
 - **"<leader>re"** : Extract
@@ -58,10 +80,10 @@
 
 ##### Resize
 
-- **"<C-j>"** : resize +2
-- **"<C-k>"** : resize -2
-- **"<C-h>"** : vertical resize -2
-- **"<C-l>"** : vertical resize +2
+- **"<M-j>"** : resize +2
+- **"<M-k>"** : resize -2
+- **"<M-h>"** : vertical resize -2
+- **"<M-l>"** : vertical resize +2
 
 ##### Telescope
 
@@ -69,11 +91,15 @@
 - **"<leader>fs"** : Find in file
 - **"<leader>fg"** : Folder grep
 - **"<leader>fb"** : Find buffer 
-- **"<C-x>"** : Open file in horizontal split
-- **"<C-v>"** : Open file in vertical split
+- **"<C-s>s"** : Open file in horizontal split
+- **"<C-s>v"** : Open file in vertical split
 - **"<C-t>"** : Open file in new tab
-- **"<C-u>"** : Scroll up in preview window
-- **"<C-d>"** : Scroll down in preview window
+- **"<M-k>"** : Scroll up in preview window
+- **"<M-j>"** : Scroll down in preview window
+- **"<M-h>"** : Scroll left in preview window
+- **"<M-l>"** : Scroll right in preview window
+- **"<C-j>"** : Move to next item
+- **"<C-k>"** : Move to prev item
 
 ##### Tree
 
@@ -97,13 +123,12 @@
 
 ##### UFO
 
-- **"zR"** : open all folds
-- **"zM"** : open all folds
+- **"zo"** : open all folds
+- **"zc"** : close all folds
 
 ##### Miscellaneous 
 
-- **"<leader>t"** : Open terminal       **ToggleTerm**
-- **"<C-b>"** : Toggle debugger         **DAP**
-- **"<leader>fw"** : Format and write   **Formatter**
-- **"<C-s>>v"** : Vertical split
-- **"<C-s>s"** : Horizontal split
+- **"<leader>t"**  : Open terminal     **ToggleTerm**
+- **"<C-b>"**      : Toggle debugger   **DAP**
+- **"<leader>fw"** : Format and write  **Formatter**
+- **"]m" "[m"**    : Jump method       **Treesitter**

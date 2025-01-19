@@ -22,13 +22,13 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<S-q>"] = cmp.mapping.select_prev_item(),
-		["<S-e>"] = cmp.mapping.select_next_item(),
-		["<S-b>"] = cmp.mapping.scroll_docs(-4),
-		["<S-f>"] = cmp.mapping.scroll_docs(4),
-		["<S-Space>"] = cmp.mapping.complete(),
-		["<S-x>"] = cmp.mapping.abort(),
-		["<S-Tab>"] = cmp.mapping.confirm({ select = true }),
+		["<C-j>"] = cmp.mapping.select_prev_item(),
+		["<C-k>"] = cmp.mapping.select_next_item(),
+		["<M-j>"] = cmp.mapping.scroll_docs(-4),
+		["<M-k>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<Esc>"] = cmp.mapping.abort(),
+		["<Tab>"] = cmp.mapping.confirm({ select = true }),
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
@@ -41,7 +41,10 @@ cmp.setup({
 
 -- `/` cmdline setup.
 cmp.setup.cmdline({ "/", "?" }, {
-	mapping = cmp.mapping.preset.cmdline(),
+	mapping = cmp.mapping.preset.cmdline({
+		-- ["<C-j>"] = cmp.mapping.select_prev_item(),
+		-- ["<C-k>"] = cmp.mapping.select_next_item(),
+    }),
 	sources = {
 		{ name = "buffer" },
 	},
@@ -49,7 +52,10 @@ cmp.setup.cmdline({ "/", "?" }, {
 
 -- `:` cmdline setup.
 cmp.setup.cmdline(":", {
-	mapping = cmp.mapping.preset.cmdline(),
+	mapping = cmp.mapping.preset.cmdline({
+		-- ["<C-j>"] = cmp.mapping.select_prev_item(),
+		-- ["<C-k>"] = cmp.mapping.select_next_item(),
+    }),
 	sources = cmp.config.sources({
 		{ name = "path" },
 	}, {
@@ -57,5 +63,3 @@ cmp.setup.cmdline(":", {
 	}),
 	matching = { disallow_symbol_nonprefix_matching = false },
 })
-
-
