@@ -38,9 +38,12 @@ return {
 	-- Tabline plugin
 	-- { "romgrk/barbar.nvim" },
 	-- Neovim statusline
-	{ "nvim-lualine/lualine.nvim" },
-	-- Improve default vim.ui interface
-	{ "stevearc/dressing.nvim" },
+	{
+		"nvim-lualine/lualine.nvim",
+		config = function()
+			require("lualine").setup()
+		end,
+	},
 	-- Toggle and manage terminals
 	{ "akinsho/toggleterm.nvim", version = "*", keys = { "<leader>t" } },
 	-- UI replacement for messages, cmdline and popupmenu
@@ -53,7 +56,7 @@ return {
 			-- "rcarriga/nvim-notify",
 		},
 	},
-    -- Enhanced code navigation 
+	-- Enhanced code navigation
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
@@ -112,11 +115,19 @@ return {
 				},
 			},
 		},
+		config = function()
+			vim.notify = require("fidget")
+		end,
 	},
 	-- Autopair plugin
 	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
 	-- Commenting plugin
-	{ "numToStr/Comment.nvim" },
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 	-- highlight patterns in text
 	{ "echasnovski/mini.hipatterns", event = "BufReadPre", opts = {} },
 	-- Incremental LSP renaming
@@ -128,10 +139,17 @@ return {
 		---@module 'render-markdown'
 		---@type render.md.UserConfig
 		opts = {},
+		config = function()
+			require("render-markdown").setup()
+		end,
 	},
 	-- add Indentation guides
 	{
 		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {},
 		config = function()
 			require("ibl").setup()
 		end,
