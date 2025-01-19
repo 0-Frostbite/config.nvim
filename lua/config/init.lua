@@ -11,15 +11,12 @@ require("config.format")
 require("config.toggleterm")
 -- require("config.barbar")
 require("config.harpoon")
-require("config.comment")
-require("config.fidget")
 require("config.telescope")
 require("config.hipatterns")
 require("config.inc-rename")
 require("config.refactoring")
-require("config.markdown")
 require("config.themery")
-require("config.lualine")
+require("config.noice")
 
 vim.wo.relativenumber = true
 vim.opt.tabstop = 4
@@ -32,13 +29,13 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.o.autoindent = true
 vim.o.smartindent = true
-vim.o.hlsearch = true
+vim.o.hlsearch = false
 
-vim.keymap.set("n", "<C-j>", ":resize +2 <CR>")
-vim.keymap.set("n", "<C-k>", ":resize -2 <CR>")
+vim.keymap.set("n", "<M-j>", ":resize +2 <CR>")
+vim.keymap.set("n", "<M-k>", ":resize -2 <CR>")
 
-vim.keymap.set("n", "<C-h>", ":vertical resize -2 <CR>")
-vim.keymap.set("n", "<C-l>", ":vertical resize +2 <CR>")
+vim.keymap.set("n", "<M-h>", ":vertical resize -2 <CR>")
+vim.keymap.set("n", "<M-l>", ":vertical resize +2 <CR>")
 
-vim.keymap.set("n", "ss", ":split <CR>")
-vim.keymap.set("n", "vs", ":vsplit <CR>")
+vim.keymap.set("n", "<C-s>s", ":split <CR>")
+vim.keymap.set("n", "<C-s>v", ":vsplit <CR>")
