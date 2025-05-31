@@ -52,8 +52,8 @@
 - **"<A-q>"** : Load previous buffer
 - **"<A-e>"** : Load next buffer
 - **"<A-a>"** : Toggle HarpoonUI
-- **"<A-[count]>"** : Load Buffer at Position[count]
-- **"<A-z>"** : Remove Buffer form Harpoon list
+- **"<A-[count]>"** : Load Buffer at Position[{count}]
+- **"<A-z>"** : Remove Buffer from Harpoon list
 
 ##### Inc-Rename
 

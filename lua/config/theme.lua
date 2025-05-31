@@ -12,9 +12,9 @@ function theme(theme, trans)
 	vim.cmd.colorscheme(theme)
 end
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 v = "vscode" --$
 g = "gruvbox-material" --$
@@ -23,4 +23,4 @@ c = "cyberdream"
 f = "fluoromachine"
 k = "kurayami"
 y = "cmyk-colourrrs"
-
+p = "catppuccin"

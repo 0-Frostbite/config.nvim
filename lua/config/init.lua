@@ -2,7 +2,7 @@ require("config.lazy")
 require("config.theme")
 require("config.treesitter")
 require("config.tree")
-require("config.ufo")
+-- require("config.ufo")
 require("config.mason")
 require("config.lsp")
 require("config.debug")
@@ -29,7 +29,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.o.autoindent = true
 vim.o.smartindent = true
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 vim.keymap.set("n", "<M-j>", ":resize +2 <CR>")
 vim.keymap.set("n", "<M-k>", ":resize -2 <CR>")
@@ -39,3 +39,10 @@ vim.keymap.set("n", "<M-l>", ":vertical resize +2 <CR>")
 
 vim.keymap.set("n", "<C-s>s", ":split <CR>")
 vim.keymap.set("n", "<C-s>v", ":vsplit <CR>")
+
+vim.api.nvim_create_user_command(
+    "Keymap",
+    function()
+	    vim.api.nvim_command("e ~/.config/nvim/SelfNotes.md")
+    end,
+    { nargs = 0 })

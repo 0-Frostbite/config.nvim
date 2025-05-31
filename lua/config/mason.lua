@@ -22,8 +22,8 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-j>"] = cmp.mapping.select_prev_item(),
-		["<C-k>"] = cmp.mapping.select_next_item(),
+		["<C-k>"] = cmp.mapping.select_prev_item(),
+		["<C-j>"] = cmp.mapping.select_next_item(),
 		["<M-j>"] = cmp.mapping.scroll_docs(-4),
 		["<M-k>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
