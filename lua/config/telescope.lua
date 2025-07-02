@@ -2,6 +2,13 @@ local actions = require("telescope.actions")
 
 require("telescope").setup({
 	defaults = {
+		winblend = 0,
+		-- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+		borderchars = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" },
+		-- borderchars = { "━", "┃", "━", "┃", "┏", "┓", "┛", "┗" },
+   
+		layout_strategy = "horizontal", -- horizontal, vertical
+		border = true, -- false or true
 		mappings = {
 			i = {
 
@@ -17,7 +24,6 @@ require("telescope").setup({
 				["<M-j>"] = actions.preview_scrolling_down,
 				["<M-h>"] = actions.preview_scrolling_left,
 				["<M-l>"] = actions.preview_scrolling_right,
-
 			},
 			n = {
 
@@ -30,11 +36,11 @@ require("telescope").setup({
 				["<M-j>"] = actions.preview_scrolling_down,
 				["<M-h>"] = actions.preview_scrolling_left,
 				["<M-l>"] = actions.preview_scrolling_right,
-
 			},
 		},
 	},
 })
+
 require("telescope").load_extension("fzf")
 
 local builtin = require("telescope.builtin")
