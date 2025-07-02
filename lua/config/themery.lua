@@ -8,6 +8,8 @@ require("themery").setup({
 		"kurayami",
 		"cmyk-colourrrs",
 		"catppuccin",
+	    -- "shado",
+	    "shado-legacy",
 	},
 	livepreview = true,
 })
