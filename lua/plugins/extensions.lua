@@ -53,7 +53,7 @@ return {
 		opts = {},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
-			-- "rcarriga/nvim-notify",
+			"rcarriga/nvim-notify",
 		},
 	},
 	-- Enhanced code navigation
@@ -104,19 +104,14 @@ return {
 			},
 		},
 	},
-	-- UI for Neovim notifications
+	-- Notification pop-up
 	{
-		"j-hui/fidget.nvim",
-		opts = {
-			notification = {
-				window = {
-					winblend = 0,
-					align = "top",
-				},
-			},
-		},
+		"rcarriga/nvim-notify",
 		config = function()
-			vim.notify = require("fidget")
+			require("notify").setup({
+				render = "minimal", -- default, minimal, simple, compact
+			})
+			vim.notify = require("notify")
 		end,
 	},
 	-- Autopair plugin
@@ -180,15 +175,6 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		opts = {},
-	},
-	-- Start a live server
-	{
-		"barrett-ruth/live-server.nvim",
-		build = "pnpm add -g live-server",
-		cmd = { "LiveServerStart", "LiveServerStop" },
-		config = function()
-			require("live-server").setup()
-		end,
 	},
 	-- Zen mode
 	{
