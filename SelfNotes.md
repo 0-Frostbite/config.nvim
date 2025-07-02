@@ -63,6 +63,7 @@
 
 - **<gd>** : Goto definition
 - **<K>**  : Show documentation
+- **<S-K>**  : Show documentation in new page
 - **<gd>** : Show reference
 - **<C-j/k>** : Select item
 - **<M-j/k>** : Scroll documentation

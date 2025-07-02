@@ -29,5 +29,3 @@ dap.configurations.python = {
 
 -- vim.keymap.set("n","<leader><C-d>",dapui.close, {})
 vim.keymap.set("n", "<C-b>", dapui.toggle, {})
-
-
