@@ -110,6 +110,7 @@ return {
 		config = function()
 			require("notify").setup({
 				render = "minimal", -- default, minimal, simple, compact
+				background_colour = "#000000",
 			})
 			vim.notify = require("notify")
 		end,

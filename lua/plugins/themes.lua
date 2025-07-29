@@ -6,6 +6,13 @@ return {
 	{ "kevinm6/kurayami.nvim" },
 	{ "scottmckendry/cyberdream.nvim" },
 	{ "maxmx03/fluoromachine.nvim" },
-	{ "xero/miasma.nvim" },
+	{
+		"0-Frostbite/miasma.nvim",
+		config = function()
+			-- Optional
+			vim.g.miasma_transparent = 1 -- Enable transparency
+			-- vim.cmd("colorscheme miasma")
+		end,
+	},
 	{ "Shadorain/shadotheme" },
 }
